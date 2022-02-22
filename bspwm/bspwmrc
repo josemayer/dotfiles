@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 polybar main &
 dunst &
-nitrogen --restore &
+nitrogen --random --set-scaled ~/Pictures/Wallpapers &
 redshift -P &
 
 xsetroot -cursor_name left_ptr
