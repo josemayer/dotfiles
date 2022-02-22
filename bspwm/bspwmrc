@@ -4,6 +4,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 polybar main &
 dunst &
 nitrogen --restore &
+redshift &
 
 xsetroot -cursor_name left_ptr
 
