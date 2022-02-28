@@ -146,3 +146,15 @@ XF86AudioRaiseVolume
 # decrease volume
 XF86AudioLowerVolume
   pactl -- set-sink-volume 0 -5%
+
+#
+# printscreen controllers
+#
+
+# fullscreen printscreen
+Print
+  flameshot full -r -p ~/Pictures/Screenshots | xclip -selection clipboard -t image/png 
+
+# GUI printscreen
+ctrl + Print
+  flameshot gui -r -p ~/Pictures/Screenshots | xclip -selection clipboard -t image/png
