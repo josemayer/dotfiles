@@ -9,7 +9,6 @@ call plug#begin('~/.config/nvim/plugins')
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'uiiaoo/java-syntax.vim'
 	Plug 'daeyun/vim-matlab'  
-	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 call plug#end()
 
