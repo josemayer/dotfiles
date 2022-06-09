@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugins')
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'uiiaoo/java-syntax.vim'
 	Plug 'daeyun/vim-matlab'
+	Plug 'github/copilot.vim'
 
 call plug#end()
 
