@@ -1,14 +1,11 @@
-:set tabstop=2
-:set shiftwidth=2
-:set expandtab
-noremap <F1> :source ~/.config/nvim/init.vim<CR>
+noremap <F1> :source ~/.config/nvim/init.vim
 
 call plug#begin('~/.config/nvim/plugins')
 
 	Plug 'itchyny/lightline.vim'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'uiiaoo/java-syntax.vim'
-	Plug 'daeyun/vim-matlab'  
+	Plug 'daeyun/vim-matlab'
 
 call plug#end()
 
@@ -17,7 +14,6 @@ noremap <C-p> "+p
 noremap <C-a> ggvG
 noremap <C-f> /
 noremap <C-h> %s/
-noremap <C-=> :Prettier
 
 set nu
 colorscheme nord
