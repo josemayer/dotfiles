@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugins')
 	Plug 'neo4j-contrib/cypher-vim-syntax'
 	Plug 'ggandor/lightspeed.nvim'
 	Plug 'lervag/vimtex'
+	Plug 'gpanders/editorconfig.nvim'
 
 call plug#end()
 
