@@ -1,7 +1,6 @@
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {
 		"bash",
-		"css",
 		"c",
 		"cpp",
 		"diff",
@@ -10,25 +9,31 @@ require'nvim-treesitter.configs'.setup {
 		"gitignore",
 		"git_config",
 		"git_rebase",
-		"html",
 		"java",
 		"javascript",
 		"julia",
 		"json",
 		"kotlin",
-		"latex",
 		"lua",
 		"matlab",
 		"python",
 		"regex",
 		"rust",
-		"scss",
 		"toml",
 		"tsx",
 		"typescript",
 		"vim",
 		"yaml",
 	},
+
+	ignore_install = {
+		"html",
+		"vue",
+		"css",
+		"scss",
+		"latex",
+	},
+
 	sync_install = false,
 	auto_install = true,
 	highlight = {
