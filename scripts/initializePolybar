@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# For any monitor in bspc that is not the primary monitor, run the polybar script
+polybar main -c ~/.config/polybar/config &
+polybar main -c ~/.config/polybar/config2 &

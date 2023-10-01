@@ -1,14 +1,25 @@
 #! /bin/sh
 
+initializeMonitors &
 pgrep -x sxhkd > /dev/null || sxhkd &
-polybar main &
+initializePolybar &
 dunst &
 nitrogen --random --set-scaled ~/Pictures/Wallpapers &
 redshift -P &
 
 xsetroot -cursor_name left_ptr
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+all_monitors=$(xrandr --query | grep " connected"| cut -f 1 -d " ")
+num_monitors=$(echo $all_monitors | wc -w)
+
+numerals=(I II III IV V VI VII VIII IX X)
+if [ $num_monitors -eq 1 ]; then
+	bspc monitor -d ${numerals[*]}
+else
+	bspc monitor DisplayPort-1 -d ${numerals[*]:0:5}
+	bspc monitor DP1 -d ${numerals[*]:5:5}
+fi
+
 
 bspc config border_width         1
 bspc config window_gap           0
@@ -17,6 +28,4 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8'
-bspc rule -a Vivaldi-stable desktop='^2'
 bspc rule -a Zathura state=tiled 
