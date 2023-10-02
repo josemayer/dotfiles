@@ -59,7 +59,7 @@ font-2 = HackNerdFont:pixelsize=12;1
 
 modules-left = bspwm
 modules-center = date
-modules-right = filesystem memory cpu temperature powermenu
+modules-right = filesystem memory cpu powermenu
 
 ;wm-restack = generic
 ;wm-restack = bspwm
@@ -169,7 +169,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "cpu"
 format-prefix-foreground = ${colors.icon}
 format-underline = ${colors.secondary}
 label = %percentage:2%%
@@ -177,7 +177,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "﬙  "
+format-prefix = "mem"
 	format-prefix-foreground = ${colors.icon}
 format-underline = ${colors.secondary}
 label = %percentage_used%%
