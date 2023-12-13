@@ -3,7 +3,7 @@ noremap <F1> :source ~/.config/nvim/init.vim
 call plug#begin('~/.config/nvim/plugins')
 
 	Plug 'itchyny/lightline.vim'
-	Plug 'arcticicestudio/nord-vim'
+	Plug 'tyrannicaltoucan/vim-deep-space'
 	Plug 'github/copilot.vim'
 	Plug 'PontusPersson/pddl.vim'
 	Plug 'neo4j-contrib/cypher-vim-syntax'
@@ -28,9 +28,22 @@ noremap <silent> <S-h> <S-Left>
 noremap <silent> <S-l> <S-Right>
 
 set nu
-colorscheme nord
+set termguicolors
+colorscheme deep-space
 
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {
+      \ 'colorscheme': 'deepspace',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ }
+
+let g:deepspace_italics=1
 
 augroup vimtex_config
 	au!
