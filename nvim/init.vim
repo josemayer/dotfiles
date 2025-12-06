@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugins')
 	    let g:tex_flavor='latex'
 	    let g:vimtex_view_method='zathura'
 	    let g:vimtex_quickfix_mode=0
+	    let g:vimtex_view_forward_search_on_start=0	
 	Plug 'gpanders/editorconfig.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
